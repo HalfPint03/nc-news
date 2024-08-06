@@ -74,6 +74,26 @@ h3 {
     color: rgb(129, 129, 129);
 }
 
-h4{
+h4 {
     color: rgb(129, 129, 129);
+}
+
+.comment-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.comment-list {
+    list-style-type: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    margin: 2%;
+    width: 30%;
+    padding: 2px 16px;
+}
+
+.comment-header {
+    text-align: center;
 }
