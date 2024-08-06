@@ -58,19 +58,3 @@ function Header() {
   );
 }
 export default Header;
-
-/* <div>
-        <h1>Grin & Bear News</h1>
-        <nav className="nav-bar">
-          <Link to="/home" className="nav-bar-link">
-            Home
-          </Link>
-          <Link to="/articles" className="nav-bar-link">
-            Articles
-          </Link>
-          <Link to="/users" className="nav-bar-link">
-            Users
-          </Link>
-        </nav>
-      </div>
-      */
