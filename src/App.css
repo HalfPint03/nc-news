@@ -98,27 +98,3 @@ h4 {
 .comment-header {
     text-align: center;
 }
-
-.new-comment-box{
-    display: flex;
-    justify-content: center;
-}
-
-.new-comment-container{
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 10px;
-    margin: 2%;
-    width: 30%;
-    padding: 20px 16px;
-    margin-bottom: 10px;
-}
-
-.new-comment-form{
-    flex-direction: column;
-}
-
-.fancy-buttons{
-    align-self: center;
-}
