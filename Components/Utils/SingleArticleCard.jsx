@@ -1,7 +1,6 @@
 import formatDate from "./formatDate";
 import Comments from "../Comments";
 import Votes from "../Votes";
-import NewComment from "../NewComment";
 
 function SingleArticleCard(article) {
   return (
