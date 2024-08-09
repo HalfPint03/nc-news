@@ -72,6 +72,7 @@ h2 {
 
 h3 {
     color: rgb(129, 129, 129);
+    text-align: center;
 }
 
 h4 {
@@ -97,4 +98,3 @@ h4 {
 .comment-header {
     text-align: center;
 }
-
