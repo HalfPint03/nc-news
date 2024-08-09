@@ -20,7 +20,7 @@ function Header() {
       <nav className="home-buttons">
         <Stack spacing={2} direction="row">
           <ThemeProvider theme={theme}>
-            <Link to="/home">
+            <Link to="/">
               <Button
                 className="fancy-buttons"
                 variant="contained"

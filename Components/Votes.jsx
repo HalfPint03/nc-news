@@ -45,11 +45,12 @@ function Votes({ article }) {
   return (
     <div>
       <h2>Votes: {article.votes + incdVotes + decdVotes}</h2>
+      <div className="article-position">
       <Stack spacing={2} direction="row">
         <ThemeProvider theme={theme}>
           <Button
           onClick={incVotes}
-            className="fancy-buttons"
+            className="vote-buttons"
             variant="contained"
             size="large"
             disableElevation
@@ -58,7 +59,7 @@ function Votes({ article }) {
           </Button>
           <Button
           onClick={decVotes}
-            className="fancy-buttons"
+            className="vote-buttons"
             variant="contained"
             size="large"
             disableElevation
@@ -67,6 +68,7 @@ function Votes({ article }) {
           </Button>
         </ThemeProvider>
       </Stack>
+      </div>
     </div>
   );
 }

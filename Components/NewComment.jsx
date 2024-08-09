@@ -7,7 +7,6 @@ import { useState } from "react";
 import fetchComments from "./Utils/fetchComments";
 
 function NewComment({ setComments }) {
-  //what is setComment meant to be?
   const theme = createTheme({
     palette: {
       primary: {
@@ -25,7 +24,6 @@ function NewComment({ setComments }) {
   function handleBody(event) {
     setBody(event.target.value);
   }
-  //hard code user - disable submit while submitting - delete button
   function handleSubmit(event) {
     event.preventDefault();
     postNewComment(article_id, body, "tickle122")
@@ -43,6 +41,7 @@ function NewComment({ setComments }) {
       <div className="new-comment-box">
         <div className="new-comment-container">
           <h3>New Comment</h3>
+          <h4>tickle122</h4>
           <form className="new-comment-form">
             <label>
               <input
