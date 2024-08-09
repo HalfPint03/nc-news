@@ -8,21 +8,27 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 function Votes({ article }) {
   const [incdVotes, setIncdVotes] = useState(0);
   const [decdVotes, setDecdVotes] = useState(0);
+  const [isClicked, setIsClicked] = useState(false)
+  const [isClickedNegative, setIsClickedNegative] = useState(false)
   const { article_id } = useParams();
 
   function incVotes() {
     setIncdVotes((currVotes) => {
+      if (!isClicked) setIsClicked(true)
+      setIsClickedNegative(false)
       return currVotes + 1;
     });
     patchArticleVotes(article.article_id, { inc_votes: 1 }).catch(() => {
       setIncdVotes((currVotes) => {
+        alert('OFFLINE Cannot update votes')
         return currVotes - 1;
       });
     });
   }
-
   function decVotes() {
     setDecdVotes((currVotes) => {
+      if (!isClickedNegative) setIsClickedNegative(true)
+        setIsClicked(false)
       return currVotes - 1;
     });
     patchArticleVotes(article.article_id, { inc_votes: -1 }).catch(() => {
@@ -31,7 +37,6 @@ function Votes({ article }) {
       });
     });
   }
-
   const theme = createTheme({
     palette: {
       primary: {
@@ -54,6 +59,7 @@ function Votes({ article }) {
             variant="contained"
             size="large"
             disableElevation
+            disabled = {isClicked}
           >
             +
           </Button>
@@ -63,6 +69,7 @@ function Votes({ article }) {
             variant="contained"
             size="large"
             disableElevation
+            disabled = {isClickedNegative}
           >
             -
           </Button>

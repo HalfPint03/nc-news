@@ -19,15 +19,17 @@ function NewComment({ setComments }) {
   });
   const { article_id } = useParams();
   const [body, setBody] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function handleBody(event) {
     setBody(event.target.value);
   }
   function handleSubmit(event) {
     event.preventDefault();
+    setIsSubmitting(true)
     postNewComment(article_id, body, "tickle122")
       .then(() => {
+        setIsSubmitting(false)
         setBody("");
         return fetchComments(article_id);
       })
@@ -60,6 +62,7 @@ function NewComment({ setComments }) {
                   variant="contained"
                   size="small"
                   disableElevation
+                  disabled = {isSubmitting}
                 >
                   Submit
                 </Button>
