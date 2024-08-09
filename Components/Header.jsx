@@ -41,6 +41,16 @@ function Header() {
                 Articles
               </Button>
             </Link>
+            <Link to="/topics">
+              <Button
+                className="fancy-buttons"
+                variant="contained"
+                size="large"
+                disableElevation
+              >
+                Topics
+              </Button>
+            </Link>
             <Link to="/users">
               <Button
                 className="fancy-buttons"
