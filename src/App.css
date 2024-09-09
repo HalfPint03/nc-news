@@ -34,6 +34,7 @@ h1 {
     padding: 2px 16px;
     text-align: center;
     background-color: rgb(247, 209, 229);
+    margin-top: 5px;
 }
 
 .article-list:hover {
@@ -43,6 +44,7 @@ h1 {
 .articles-img {
     border-radius: 10px;
     width: 100%;
+    margin-top: 10px;
 }
 
 .single-article {
